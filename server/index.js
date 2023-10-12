@@ -10,12 +10,14 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: '*', // Replace with the origin you want to allow
-  methods: 'GET,POST', // You can specify the HTTP methods you want to allow
-  credentials: true,
-  optionsSuccessStatus: 204, // Some browsers may send an OPTIONS request before the actual request
-}));
+// Configure CORS to allow requests from http://localhost:5173
+const corsOptions = {
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Respond to preflight requests
 
 app.use(express.json({ limit: '50mb' }));
 
