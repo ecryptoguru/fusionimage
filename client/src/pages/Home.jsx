@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import PropTypes from 'prop-types';
 import { Card, FormField, Loader } from '../components';
 
 const RenderCards = ({ data, title }) => {
@@ -7,12 +7,14 @@ const RenderCards = ({ data, title }) => {
     return (
       data.map((post) => <Card key={post._id} {...post} />)
     );
-  }
+  }  
 
   return (
     <h2 className="mt-5 font-bold text-[#6469ff] text-xl uppercase">{title}</h2>
   );
 };
+
+
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -28,9 +30,10 @@ const Home = () => {
     try {
       const response = await fetch('https://dalle-arbb.onrender.com/api/v1/post', {
         method: 'GET',
-        headers: {
+        headers: {    
+          'Accept': 'application/json',
           'Content-Type': 'application/json',
-        },
+          'Access-Control-Allow-Origin': '*' },
       });
 
       if (response.ok) {
@@ -110,6 +113,11 @@ const Home = () => {
       </div>
     </section>
   );
+};
+
+RenderCards.propTypes = {
+  data: PropTypes.array,
+  title: PropTypes.string,
 };
 
 export default Home;

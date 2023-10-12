@@ -24,9 +24,12 @@ const CreatePost = () => {
         setGeneratingImg(true);
         const response = await fetch('https://dalle-arbb.onrender.com/api/v1/dalle', {
           method: 'POST',
-          headers: {
+          mode: 'cors',
+          credentials: "include",
+          headers: {    
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
-          },
+            'Access-Control-Allow-Origin': '*' },
           body: JSON.stringify({
             prompt: form.prompt,
           }),
@@ -52,9 +55,10 @@ const CreatePost = () => {
       try {
         const response = await fetch('https://dalle-arbb.onrender.com/api/v1/post', {
           method: 'POST',
-          headers: {
+          headers: {    
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
-          },
+            'Access-Control-Allow-Origin': '*' },
           body: JSON.stringify({ ...form }),
         });
 

@@ -1,6 +1,8 @@
-
+import PropTypes from 'prop-types';
 import { download } from '../assets';
 import { downloadImage } from '../utils';
+
+
 
 const Card = ({ _id, name, prompt, photo }) => (
   <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card">
@@ -32,4 +34,10 @@ const Card = ({ _id, name, prompt, photo }) => (
   </div>
 );
 
+Card.propTypes = {
+  _id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  prompt: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+};
 export default Card;
