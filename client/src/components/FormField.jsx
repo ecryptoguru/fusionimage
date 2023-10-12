@@ -25,7 +25,7 @@ const FormField = ({
           className="font-semibold text-xs text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 
           focus:outline-none focus:ring-blue-300 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 py-1 px-2 rounded-[5px]"
         >
-          Surprise me
+          Click for Surprise
         </button>
       )}
     </div>
