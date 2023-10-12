@@ -10,10 +10,10 @@ dotenv.config();
 
 const app = express();
 
-// Configure CORS to allow requests from http://localhost:5173
+// Configure CORS to allow requests
 const corsOptions = {
   origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: 'GET, POST',
 };
 
 app.use(cors(corsOptions));
