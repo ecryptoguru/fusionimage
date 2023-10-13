@@ -28,7 +28,7 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8080/api/v1/post', {
+      const response = await fetch('https://fusionimage.onrender.com/api/v1/post', {
         method: 'GET',
         mode: 'cors',
         headers: {   
