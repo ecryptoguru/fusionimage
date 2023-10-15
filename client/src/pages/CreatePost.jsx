@@ -148,7 +148,7 @@ const CreatePost = () => {
 
         <div className="mt-10">
           <p className="mt-2 text-[#666e75] text-[14px]">
-          You are welcome to share it with our Community if you want...
+          You are welcome to share it with our Community and Download the Image...
           </p>
           <button
             type="submit"
