@@ -6,15 +6,16 @@ import { Home, CreatePost } from './pages';
 const App = () => (
   <BrowserRouter>
     <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
-      <div>
+    <div className="flex flex-1 flex-row justify-start">
       <Link to="/">
         <img 
          src={logo}
          alt="logo" 
-         className="w-14 object-contain" />   
+         className="w-14 object-contain" />  
       </Link>
-      </div>
-      <div className="flex justify-end gap-4">
+      <p className="text-black font-semibold text-lg ml-1 mt-3">FusionImage</p>
+      </div> 
+      <div className="flex justify-end gap-2 mt-1">
       <Link to="https://www.fusionwaveai.com" 
        target="_blank"  // Add this line to open the link in a new page
        className="text-white object-right bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l
