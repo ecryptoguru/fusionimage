@@ -84,7 +84,9 @@ const CreatePost = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">FusionImage Generate</h1>
+        <h1 className="font-extrabold text-[#222328] text-[32px]">
+         FusionImage Generate
+        </h1>
         <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">
          Generate an imaginative image with the power of AI through FusionImage and share it with the community</p>
       </div>
