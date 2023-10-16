@@ -18,16 +18,16 @@ const App = () => (
       </Link>
     </div> 
     <div className="flex justify-end gap-2 mt-1">
-      <Link to="https://www.fusionwaveai.com" 
+      {/*<Link to="https://www.fusionwaveai.com" 
        target="_blank"  // Add this line to open the link in a new page
        className="text-white object-right bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l
         focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
         Mint NFT  
-      </Link>
+      </Link>*/}
       <Link to="/create-post" 
        className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l
        focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-       Create AI Image
+       Create
        </Link>
      </div>
     </header>
